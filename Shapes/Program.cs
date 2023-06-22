@@ -9,19 +9,19 @@ namespace Shapes
             public string name;
             public float width;
             public float height;
+
+            public Shape(string name, float width, float height)
+            {
+                this.name = name;
+                this.width = width;
+                this.height = height;
+            }
         }
         static void Main(string[] args)
         {
             // Declare all shapes
-            Shape shape1 = new Shape();
-            shape1.name = "Shape 1";
-            shape1.width = 2;
-            shape1.height = 8;
-
-            Shape shape2 = new Shape();
-            shape2.name = "Shape 2";
-            shape2.width = 3;
-            shape2.height = 3;
+            Shape shape1 = new Shape("Shape 1", 2, 8);
+            Shape shape2 = new Shape("Shape 2", 3, 3);
 
             // Print the details of each shape
             PrintShape(shape1);
