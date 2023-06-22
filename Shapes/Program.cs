@@ -16,6 +16,12 @@ namespace Shapes
                 this.width = width;
                 this.height = height;
             }
+            public void Print()
+            {
+                Console.WriteLine(name);
+                Console.WriteLine($"    Area: {width * height}");
+                Console.WriteLine($"    Perimeter: {2 * width + 2 * height}");
+            }
         }
         static void Main(string[] args)
         {
@@ -24,14 +30,8 @@ namespace Shapes
             Shape shape2 = new Shape("Shape 2", 3, 3);
 
             // Print the details of each shape
-            PrintShape(shape1);
-            PrintShape(shape2);
-        }
-        static void PrintShape(Shape shape)
-        {
-            Console.WriteLine(shape.name);
-            Console.WriteLine($"    Area: {shape.width * shape.height}");
-            Console.WriteLine($"    Perimeter: {2 * shape.width + 2 * shape.height}");
+            shape1.Print();
+            shape2.Print();
         }
     }
 }
