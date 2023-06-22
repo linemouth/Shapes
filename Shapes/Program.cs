@@ -6,6 +6,8 @@ namespace Shapes
     {
         class Shape
         {
+            public float Area => width * height;
+            public float Perimeter => 2 * width + 2 * height;
             public string name;
             public float width;
             public float height;
@@ -19,8 +21,8 @@ namespace Shapes
             public void Print()
             {
                 Console.WriteLine(name);
-                Console.WriteLine($"    Area: {width * height}");
-                Console.WriteLine($"    Perimeter: {2 * width + 2 * height}");
+                Console.WriteLine($"    Area: {Area}");
+                Console.WriteLine($"    Perimeter: {Perimeter}");
             }
         }
         static void Main(string[] args)
