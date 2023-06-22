@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Shapes
 {
@@ -28,12 +29,16 @@ namespace Shapes
         static void Main(string[] args)
         {
             // Declare all shapes
-            Shape shape1 = new Shape("Shape 1", 2, 8);
-            Shape shape2 = new Shape("Shape 2", 3, 3);
+            List<Shape> shapes = new List<Shape> {
+                new Shape("Shape 1", 2, 8),
+                new Shape("Shape 2", 3, 3)
+            };
 
             // Print the details of each shape
-            shape1.Print();
-            shape2.Print();
+            foreach(Shape shape in shapes)
+            {
+                shape.Print();
+            }
         }
     }
 }
