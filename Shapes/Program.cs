@@ -7,21 +7,18 @@ namespace Shapes
         static void Main(string[] args)
         {
             // Declare all shapes
-            float width1 = 2;
-            float height1 = 8;
-
-            float width2 = 3;
-            float height2 = 3;
+            (string name, float width, float height) shape1 = ("Shape 1", 2, 8);
+            (string name, float width, float height) shape2 = ("Shape 2", 3, 3);
 
             // Print the details of each shape
-            PrintShape("Shape 1", width1, height1);
-            PrintShape("Shape 2", width2, height2);
+            PrintShape(shape1);
+            PrintShape(shape2);
         }
-        static void PrintShape(string name, float width, float height)
+        static void PrintShape((string name, float width, float height) shape)
         {
-            Console.WriteLine(name);
-            Console.WriteLine($"    Area: {width * height}");
-            Console.WriteLine($"    Perimeter: {2 * width + 2 * height}");
+            Console.WriteLine(shape.name);
+            Console.WriteLine($"    Area: {shape.width * shape.height}");
+            Console.WriteLine($"    Perimeter: {2 * shape.width + 2 * shape.height}");
         }
     }
 }
